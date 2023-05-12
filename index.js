@@ -95,6 +95,12 @@ function initCards(period) {
 function changePeriod(e) {
     e.preventDefault();
 
+    window.history.pushState(
+        { additionalInformation: 'Updated the url with JS' },
+        document.title,
+        e.currentTarget.href
+    );
+
     const period = e.currentTarget.dataset.period;
     reportPeriod = period;
 
