@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png" />
+        <link rel="stylesheet" href="style.css" />
+        <script async src="js/data.js" type="module"></script>
+        <title>Frontend Mentor | Time tracking dashboard</title>
+    </head>
+    <body>
+        <main class="dashboard">
+            <div id="cards-container" class="dashboard__container">
+                <div class="dashboard__main-card main-card">
+                    <div class="main-card__content">
+                        <div class="main-card__avatar">
+                            <img
+                                src="./images/my-photo.jpg"
+                                alt="My avatar"
+                                class="main-card__avatar-image" />
+                        </div>
+                        <div class="main-card__info">
+                            <span class="main-card__text">Report for</span>
+                            <h1 class="main-card__name">
+                                <div>Vlad</div>
+                                <div>Mihaylik</div>
+                            </h1>
+                        </div>
+                    </div>
+                    <nav class="main-card__nav">
+                        <ul class="main-card__menu menu">
+                            <li class="menu__item">
+                                <a
+                                    href="#daily"
+                                    data-period="daily"
+                                    class="menu__link">
+                                    Daily
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a
+                                    href="#weekly"
+                                    data-period="weekly"
+                                    class="menu__link">
+                                    Weekly
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a
+                                    href="#monthly"
+                                    data-period="monthly"
+                                    class="menu__link">
+                                    Monthly
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </main>
+
+        <script src="js/index.js" type="module"></script>
+    </body>
+</html>
