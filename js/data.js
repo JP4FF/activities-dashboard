@@ -1,4 +1,5 @@
 'use strict';
+var reportData = getReportData();
 
 async function getReportData() {
     return fetch('./data.json')
@@ -6,7 +7,3 @@ async function getReportData() {
         .then((data) => data || [])
         .catch((error) => console.log(error));
 }
-
-const reportData = await getReportData();
-
-export { reportData };

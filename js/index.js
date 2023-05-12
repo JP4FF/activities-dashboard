@@ -1,21 +1,30 @@
 'use strict';
 
-import { reportData } from './data.js';
+let activitiesData;
+let reportPeriod;
+let menuButtons;
 
-const menuButtons = document.querySelectorAll('.menu__link');
-let activitiesData = reportData;
-let reportPeriod = menuButtons[0].dataset.period.toLowerCase();
+window.addEventListener('DOMContentLoaded', main);
 
-main();
+async function main() {
+    activitiesData = await reportData;
 
-function main() {
+    menuButtons = document.querySelectorAll('.menu__link');
     menuButtons[0].classList.add('active');
+    reportPeriod = menuButtons[0].dataset.period.toLowerCase();
 
     reportPeriod = initCards(reportPeriod);
     menuButtons.forEach((button) =>
         button.addEventListener('click', changePeriod)
     );
 }
+
+// async function getReportData() {
+//     return fetch('./data.json')
+//         .then((response) => response.json())
+//         .then((data) => data || [])
+//         .catch((error) => console.log(error));
+// }
 
 function initCards(period) {
     const cardsContainer = document.getElementById('cards-container');
